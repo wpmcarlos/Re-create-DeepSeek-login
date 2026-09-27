@@ -1,0 +1,190 @@
+:root {
+  --container-width: 336px;
+  --ds-control-height-l: 48px;
+  --auth-form-min-height: 444px;
+  --dsw-alias-brand-primary: #3964fe;
+  --dsw-alias-label-caption: #adb2b8;
+  --dsw-alias-label-primary: #0f1115;
+  --dsw-alias-label-tertiary: #81858c;
+  --dsw-alias-border-l2: rgba(0, 0, 0, 0.1);
+  --dsw-specific-login-input: #f9fafb;
+  --ds-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  background-color: #fff;
+  font-family:
+    "quote-cjk-patch",
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  font-size: 14px;
+  color: var(--dsw-alias-label-tertiary);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.ds-auth-main {
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  justify-content: safe center;
+  align-items: safe center;
+  display: flex;
+  position: relative;
+}
+
+.ds-auth-form-wrapper {
+  outline: none;
+  display: flex;
+  min-height: var(--auth-form-min-height);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  flex-direction: column;
+  width: var(--container-width);
+  align-items: center;
+  margin-top: 40px;
+}
+
+.ds-sign-in-form__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 50px;
+  line-height: 0;
+}
+
+.ds-sign-in-form__icon svg path {
+  fill: var(--dsw-alias-brand-primary);
+}
+
+.ds-auth-input-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: var(--container-width);
+}
+
+.ds-input-wrapper {
+  position: relative;
+}
+
+.ds-input__toggle {
+  position: absolute;
+  top: 50%;
+  right: 21px;
+  transform: translateY(-50%);
+  display: flex;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.ds-input__toggle svg,
+.ds-input__toggle svg * {
+  background: transparent;
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--ds-control-height-l);
+  padding: 0 20px 0 16px;
+  border: 1px solid var(--dsw-alias-border-l2);
+  border-radius: 28px;
+  background-color: var(--dsw-specific-login-input);
+  color: var(--dsw-alias-label-primary);
+  caret-color: var(--dsw-alias-brand-primary);
+  font-size: 14px;
+  line-height: 25px;
+  outline: none;
+}
+
+.ds-form-item__content,
+.ds-form-item__content a {
+  font-size: 12px;
+}
+
+.ds-form-item__content {
+  line-height: 18px;
+  margin-top: 22.5px;
+  margin-bottom: 26px;
+}
+
+.ds-form-item__content a {
+  color: var(--dsw-alias-label-primary);
+  text-underline-position: from-font;
+  text-decoration: underline;
+}
+
+.ds-auth-form__footer {
+  display: flex;
+  width: var(--container-width);
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+p {
+  color: var(--dsw-alias-brand-primary);
+  font-size: 12px;
+}
+
+.ds-button {
+  background-color: var(--dsw-alias-brand-primary);
+  color: white;
+  width: var(--container-width);
+  border-radius: 100px;
+  height: 42px;
+  line-height: 22px;
+  border: none;
+  cursor: pointer;
+}
+
+.ds-sign-in-form__social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.ds-button__content {
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.ds-sign-in-form__social-link-separator {
+  background: var(--dsw-alias-border-l2);
+  flex: none;
+  width: 1px;
+  height: 12px;
+}
+
+.ds-auth-footer {
+  justify-content: center;
+  padding: 32px 18px 20px;
+  display: flex;
+}
+
+.ds-auth-footer,
+.ds-auth-footer * {
+  font-size: 13px;
+  color: var(--dsw-alias-label-caption);
+}
